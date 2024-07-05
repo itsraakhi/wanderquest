@@ -19,7 +19,9 @@ const sendToken = (res, statusCode, userId, userData) => {
 		// prettier-ignore
 		expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRE_TIME * 24 * 60 * 60 * 1000),
 		httpOnly: true,
-		...(process.env.NODE_ENV === 'production' && { secure: true }),
+		secure: true, 
+		sameSite: 'none'
+		// ...(process.env.NODE_ENV === 'production' && { secure: true, sameSite: 'none' }),
 	};
 	res.cookie('jwt', token, cookieOptions);
 

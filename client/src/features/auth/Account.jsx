@@ -7,7 +7,6 @@ import { AuthContext } from '../../context/AuthContext';
 
 function Account() {
 	const bookedTours = useLoaderData();
-	console.log(bookedTours);
 
 	const { updateUser, currentUser } = useContext(AuthContext);
 

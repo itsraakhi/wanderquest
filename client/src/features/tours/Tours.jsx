@@ -1,4 +1,3 @@
-import { listData } from '../../lib/dummydata';
 import Filter from './components/Filter';
 import TourCard from './components/TourCard';
 import Map from './components/Map';
@@ -6,10 +5,7 @@ import './Tours.scss';
 import { useLoaderData } from 'react-router-dom';
 
 function Tours() {
-	// const data = listData;
-
 	const tours = useLoaderData();
-	// console.log(tours);
 
 	return (
 		<div className="tours">
