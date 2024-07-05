@@ -7,7 +7,7 @@ class Email {
 		this.to = user.email;
 		this.firstName = user.name.split(' ')[0];
 		this.url = url;
-		this.from = `Abhinav Aggarwal <${process.env.EMAIL_FROM}>`;
+		this.from = `Raakhi Prajapati <${process.env.EMAIL_FROM}>`;
 	}
 
 	_newTransport() {
